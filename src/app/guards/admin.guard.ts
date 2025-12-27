@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AdminComponent } from '../admin/admin.component';
 import { DataService } from '../myService/data.service';
@@ -13,7 +13,7 @@ export class AdminGuard implements CanActivate {
     password: 'test1214'
   };
   data: any;
-  constructor(private readonly myService: DataService){}
+  constructor(private readonly myService: DataService, private readonly router: Router){}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -23,6 +23,7 @@ export class AdminGuard implements CanActivate {
     if (this.data[0]?.email === this.admin.email){
       return true;
     } else {
+      this.router.navigate(['/home']);
       return false;
     }
   }

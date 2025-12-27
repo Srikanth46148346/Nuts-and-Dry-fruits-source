@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path: 'update',
     component: UpdateComponent,
-    // canActivate : [AdminGuard]
+    canActivate : [AdminGuard]
   },
   {
     path: '',
