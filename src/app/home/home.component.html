@@ -1,0 +1,15 @@
+<div class="top-container">
+    <app-header></app-header>
+<div class="main-content">
+    <div class="content" *ngFor="let item of data">
+        <div class="card" >
+        <img [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title">{{item.type}}</h2>
+            <span href="#" class="price">Price: ₹ {{item.price}}</span>
+            <p class="card-text">{{item.content}}</p>
+        </div>
+    </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,13 @@
+<div [formGroup]="adminForm" class="main-container">
+    <div class="container">
+        <div class="mail-container">
+            <label id="email" for="email">Email or Phone-Number</label>
+            <input id="email" formControlName="email" type="text">
+        </div>
+        <div class="password-container">
+            <label id="password" for="password">Password</label>
+            <input id="password" formControlName="password" type="password">
+        </div>
+        <button class="submit" type="submit" (click)="handleSubmision()">Login</button>
+    </div>
+</div>

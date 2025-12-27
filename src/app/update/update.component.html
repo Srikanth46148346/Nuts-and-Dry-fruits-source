@@ -1,0 +1,11 @@
+<div class="main-container">
+    <div [formGroup]="formData" class="container">
+
+    </div>
+    <div class="all-list" *ngFor="let item of localData">
+        <label>{{item.type}}</label>
+        <input [(ngModel)] = "item.price">
+    </div>
+</div>
+
+<button (click)="updateData()">Updata Data</button>

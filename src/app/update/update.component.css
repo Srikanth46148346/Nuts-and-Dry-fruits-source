@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.all-list {
+    display: flex;
+    width: 25%;
+    gap: 4px;
+    align-items: normal;
+    justify-content: right;
+}

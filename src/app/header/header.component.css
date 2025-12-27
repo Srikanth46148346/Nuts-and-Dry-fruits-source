@@ -1,0 +1,136 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.content {
+    display: flex;
+    background-color: rgb(117 159 144);
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    span {
+        margin: 0;
+    }
+}
+
+.phone-number,
+.mail {
+    display: flex;
+    gap: 0.5rem;
+    color: white;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+    img {
+        width: 2rem;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        word-break: break-all;
+    }
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    background-color: #8cab3e;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.moving-text {
+    display: inline-block;
+    animation: scroll-text 25s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: math;
+    color: #9d4444;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .contact {
+        font-size: 100%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .contact {
+        font-size: 100%;
+    }
+}
+
+/* @media (max-width: 768px) {
+
+    .phone-number,
+    .mail {
+        a {
+            font-size: 100%;
+        }
+    }
+} */
+
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        /* Side-by-side on laptops */
+        align-items: center;
+        justify-content: center;
+        /* Centers the contact bar */
+        gap: 30px;
+    }
+}
+
+@media(max-width: 426px) {
+    .content {
+        span {
+            font-size: 60%;
+        }
+        .phone-number,.mail {
+            a{
+                font-size: 60%;
+            }
+            img{
+                width: 0.875rem;
+            }
+        }
+    }
+}
