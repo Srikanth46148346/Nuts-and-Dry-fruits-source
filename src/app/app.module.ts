@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
+import { AddsComponent } from './adds/adds.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UpdateComponent } from './update/update.component';
     HeaderComponent,
     FooterComponent,
     AdminComponent,
-    UpdateComponent
+    UpdateComponent,
+    AddsComponent
   ],
   imports: [
     BrowserModule,
