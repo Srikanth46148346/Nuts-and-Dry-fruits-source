@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateComponent } from './update/update.component';
 import { AddsComponent } from './adds/adds.component';
+import { ChildComponent } from './home/child/child.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AddsComponent } from './adds/adds.component';
     FooterComponent,
     AdminComponent,
     UpdateComponent,
-    AddsComponent
+    AddsComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

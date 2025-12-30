@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { DataService } from '../myService/data.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -10,13 +10,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class HomeComponent implements OnInit {
   data: any;
   userFormData: FormGroup;
+  parentData = 'Data from Parent';
 
-  constructor(private dataService: DataService, private fb: FormBuilder ) { }
+  constructor(private dataService: DataService, private fb: FormBuilder, private cd: ChangeDetectorRef ) { }
 
   ngOnInit(): void {
     this.formInitialization();
     this.handleBehaviour();
     this.handleUpdateData();
+    // this.handleIntervals();
+    this.handleParentDataUpdate();
 
   }
 
@@ -41,4 +44,22 @@ export class HomeComponent implements OnInit {
     // console.log('Some data :', someData);
   }
 
+  // handleIntervals(){
+  //   setTimeout(() => {
+  //     console.log('Response after time is done');
+  //     this.cd.detectChanges();
+  //     this.cd.markForCheck();
+  //     this.cd.detach();
+  //     this.cd.reattach();
+  //     this.cd.checkNoChanges();
+  //   }, 4000);
+  // }
+
+  handleParentDataUpdate(){
+    setTimeout(() => {
+      this.parentData = this.parentData.concat(' Some data we have updated');
+      console.log('Parent data after time out: ', this.parentData);
+    }, 5000);
+    console.log('Parent Data before timeout: ', this.parentData);
+  }
 }
