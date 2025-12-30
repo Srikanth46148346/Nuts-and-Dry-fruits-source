@@ -10,10 +10,11 @@
             <p class="card-text">{{item.content}}</p>
         </div>
     </div>
-        <div class="my-ads" ngIf="i === 2">
+        <div class="my-ads" *ngIf="i === 2">
             <app-adds></app-adds>
          </div>
     </div>
 </div>
 <app-child [data]="parentData"></app-child>
 </div>
+
