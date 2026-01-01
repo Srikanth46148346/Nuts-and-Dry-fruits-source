@@ -8,12 +8,14 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 export class AddsComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    try {
-      // @ts-ignore
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.error('Adsense error', e);
-    }
+    setTimeout(() => {
+      try {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {
+        console.error('Adsense error', e);
+      }
+    }, 500);
   }
 
 }
