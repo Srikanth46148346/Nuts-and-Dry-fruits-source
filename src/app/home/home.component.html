@@ -1,22 +1,21 @@
 <div class="top-container">
     <app-header></app-header>
-<div class="main-content" *ngIf="data?.length > 0">
-    <div class="content" *ngFor="let item of data; let i = index">
-        <div class="card" >
-        <img [src]="item.image" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h2 class="card-title">{{item.type}}</h2>
-            <span href="#" class="price">Price: ₹ {{item.price}}</span>
-            <p class="card-text">{{item.content}}</p>
+    <div class="main-content" *ngIf="data?.length > 0">
+        <div class="content" *ngFor="let item of data; let i = index">
+            <div class="card">
+                <img [src]="item.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">{{item.type}}</h2>
+                    <span href="#" class="price">Price: ₹ {{item.price}}</span>
+                    <p class="card-text">{{item.content}}</p>
+                </div>
+            </div>
         </div>
-    </div>
         <div class="my-ads" *ngIf="isContentReady">
             <app-adds></app-adds>
-         </div>
+        </div>
     </div>
-</div>
-<app-child [data]="parentData"></app-child>
+    <app-child [data]="parentData"></app-child>
 </div>
 
-<a [routerLink]="['/admin']" >navigate</a>
-
+<a [routerLink]="['/admin']">navigate</a>

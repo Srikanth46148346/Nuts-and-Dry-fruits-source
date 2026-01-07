@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       if (this.data && this.data.length > 3) {
       this.isContentReady = true;
     }
+      this.cd.detectChanges();
     });
   }
 
